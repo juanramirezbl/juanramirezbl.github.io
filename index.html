@@ -7,43 +7,75 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale;
+            
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
-            color: #333;
+            padding: 60px 20px; 
+            color: #444; 
             line-height: 1.6;
+            font-size: 16px;
         }
 
-        h1, h2, h3 { color: #000; margin-bottom: 10px; }
-        h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h1, h2, h3 { 
+            color: #111; 
+            margin-bottom: 10px; 
+            font-weight: 600; 
+            letter-spacing: -0.02em; 
+        }
+        
+        h1 { font-size: 2.2em; }
+
+        h2 { 
+            margin-top: 50px; 
+            border-bottom: 1px solid #f0f0f0; 
+            padding-bottom: 10px; 
+            font-size: 1.5em;
+        }
         
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        .header { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 40px; }
+        /* HEADER */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            gap: 50px; 
+            margin-bottom: 50px; 
+        }
+        
         .bio-text { flex: 1; }
-        .profile-photo { width: 180px; height: auto; border-radius: 8px; object-fit: cover; }
         
-        .social-links { margin-top: 15px; }
-        .social-links a { margin-right: 15px; font-weight: 500; }
+        .profile-photo { 
+            width: 200px; 
+            height: auto; 
+            border-radius: 6px; 
+            object-fit: cover; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+        
+        .social-links { margin-top: 20px; font-size: 0.95em; }
+        .social-links a { margin-right: 20px; }
 
-        .paper-item { display: flex; margin-bottom: 35px; align-items: flex-start; }
-        .paper-content { flex: 1; padding-right: 20px; }
-        .paper-title { font-weight: bold; display: block; margin-bottom: 4px; }
-        .authors { color: #555; margin-bottom: 4px; }
-        .venue { font-style: italic; color: #666; margin-bottom: 4px; }
-        .paper-links a { margin-right: 10px; font-size: 0.95em; }
+        /* SOFTWARE */
+        .software-item { margin-bottom: 30px; }
+        .software-title { 
+            font-weight: 600; 
+            color: #000; 
+            font-size: 1.1em;
+        }
         
-        .paper-image { 
-            width: 180px; 
-            border: 1px solid #eee; 
-            border-radius: 4px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        
+        .software-desc {
+            margin-top: 5px;
+            color: #666; 
         }
 
-        .software-item { margin-bottom: 25px; }
-        .software-title { font-weight: bold; color: #0066cc; }
-        .badges img { height: 20px; vertical-align: middle; margin-right: 5px; }
+        /*  RESEARCH  */
+        .paper-item { display: flex; margin-bottom: 35px; align-items: flex-start; }
+        .paper-content { flex: 1; padding-right: 20px; }
     </style>
 </head>
 <body>
@@ -52,21 +84,21 @@
         <div class="bio-text">
             <h1>Juan Ramírez</h1>
             <p>
-                I am a Software Engineering student at <strong>Universidad Rey Juan Carlos</strong>|Computer Vision.
+                I am a Software Engineering student at <strong>Universidad Rey Juan Carlos</strong> | <strong>Computer Vision</strong>.
             </p>
-            <p>
-                </p>
+            
             <div class="social-links">
-                <a href="#">GitHub</a> / <a href="#">Twitter</a> / <a href="#">Email</a> / <a href="#">LinkedIn</a>
+                <a href="https://github.com/juanramirezbl">GitHub</a>
+                <a href="https://x.com/najubla">Twitter</a>
+                <a href="mailto:juanramirezblanco@icloud.com">Email</a>
+                <a href="https://www.linkedin.com/in/juan-ramírez-blanco-1440a723a/">LinkedIn</a>
             </div>
         </div>
-        <img src="https://via.placeholder.com/200x250" alt="Profile Photo" class="profile-photo">
+        
     </header>
 
     <section>
         <h2>Research</h2>
-        <p>Full list on <a href="#">Google Scholar</a>.</p>
-
         </section>
 
     <section>
@@ -74,9 +106,9 @@
         
         <div class="software-item">
             <a href="#" class="software-title">Traffic Sign Detection System</a>
-            <p>An iOS application utilizing YOLO11 and CNNs for real-time traffic sign detection while driving.</p>
-            <div class="badges">
-                </div>
+            <p class="software-desc">
+                Real-time object detection system for iOS deployed on edge devices. Implemented using <strong>YOLO11</strong> for localization and custom <strong>CNN architectures</strong> for classification, optimized for low-latency inference in driving scenarios.
+            </p>
         </div>
 
     </section>
