@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+index.html
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de [Tu Nombre]</title>
+    <title>Juan Ramírez</title>
     <style>
-        /* ESTILOS GENERALES (CSS) */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             max-width: 900px;
@@ -21,7 +20,6 @@
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* HEADER / BIO */
         .header { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 40px; }
         .bio-text { flex: 1; }
         .profile-photo { width: 180px; height: auto; border-radius: 8px; object-fit: cover; }
@@ -29,7 +27,6 @@
         .social-links { margin-top: 15px; }
         .social-links a { margin-right: 15px; font-weight: 500; }
 
-        /* SECCIÓN DE INVESTIGACIÓN (RESEARCH) */
         .paper-item { display: flex; margin-bottom: 35px; align-items: flex-start; }
         .paper-content { flex: 1; padding-right: 20px; }
         .paper-title { font-weight: bold; display: block; margin-bottom: 4px; }
@@ -44,13 +41,10 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* SECCIÓN DE SOFTWARE */
         .software-item { margin-bottom: 25px; }
         .software-title { font-weight: bold; color: #0066cc; }
         .badges img { height: 20px; vertical-align: middle; margin-right: 5px; }
         
-        /* MISC */
-        .misc-text { color: #444; }
 
     </style>
 </head>
@@ -58,13 +52,10 @@
 
     <header class="header">
         <div class="bio-text">
-            <h1>Tu Nombre</h1>
             <p>
-                Soy un estudiante de doctorado/ingeniero en <strong>[Tu Universidad/Empresa]</strong>, donde trabajo con el Prof. 
-                <a href="#">Nombre del Supervisor</a>. Mis intereses incluyen la visión por computador, la robótica y la IA.
+                Soy un estudiante de ingeniería de software en <strong>Universidad Rey Juan Carlos</strong>,Mis intereses incluyen la visión por computador.
             </p>
             <p>
-                Anteriormente, obtuve mi maestría en [Universidad] y mi licenciatura en [Universidad].
             </p>
             <div class="social-links">
                 <a href="#">GitHub</a> / <a href="#">Twitter</a> / <a href="#">Email</a> / <a href="#">LinkedIn</a>
@@ -106,10 +97,9 @@
         <h2>Software</h2>
         
         <div class="software-item">
-            <a href="#" class="software-title">nombre-de-tu-libreria</a>
-            <p>Una herramienta open-source para visualización 3D en Python.</p>
+            <a href="#" class="software-title">Sistemas de detección señales tráfico</a>
+            <p>Una aplicación IOS que utiliza YOLO11 y CNN para detectar señales de trafico mientras conduces en tiempo real.</p>
             <div class="badges">
-                <img src="https://img.shields.io/badge/stars-2.2k-grey?style=social" alt="Stars">
             </div>
         </div>
 
@@ -117,16 +107,8 @@
             <a href="#" class="software-title">robot-controller</a>
             <p>Controlador optimizado para brazos robóticos usando JAX.</p>
             <div class="badges">
-                <img src="https://img.shields.io/badge/stars-500-grey?style=social" alt="Stars">
             </div>
         </div>
-    </section>
-
-    <section>
-        <h2>Misc</h2>
-        <p class="misc-text">
-            En mi tiempo libre me gusta el diseño de hardware. Aquí está mi <a href="#">mini portafolio</a>.
-        </p>
     </section>
 
 </body>
