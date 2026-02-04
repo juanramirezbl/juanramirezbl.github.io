@@ -8,8 +8,6 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-font-smoothing: antialiased; 
-            -moz-osx-font-smoothing: grayscale;
-            
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 20px; 
@@ -18,81 +16,92 @@
             font-size: 16px;
         }
 
-        h1, h2, h3 { 
-            color: #111; 
-            margin-bottom: 10px; 
-            font-weight: 600; 
-            letter-spacing: -0.02em; 
-        }
-        
-        h1 { font-size: 2.2em; }
-
-        h2 { 
-            margin-top: 50px; 
-            border-bottom: 1px solid #f0f0f0; 
-            padding-bottom: 10px; 
-            font-size: 1.5em;
-        }
+        h1, h2, h3 { color: #111; margin: 0 0 10px 0; font-weight: 600; letter-spacing: -0.02em; }
+        h1 { font-size: 2.2em; margin-bottom: 20px; }
+        h2 { margin-top: 60px; border-bottom: 1px solid #eee; padding-bottom: 15px; font-size: 1.5em; margin-bottom: 30px;}
         
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-start; 
-            gap: 50px; 
-            margin-bottom: 50px; 
-        }
-        
+        .header { display: flex; gap: 40px; margin-bottom: 50px; align-items: flex-start; }
         .bio-text { flex: 1; }
-        
-        .profile-photo { 
-            width: 200px; 
-            height: auto; 
-            border-radius: 6px; 
-            object-fit: cover; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-        }
-        
-        .social-links { margin-top: 20px; font-size: 0.95em; }
-        .social-links a { margin-right: 20px; }
-
-        .software-item { 
-            margin-bottom: 30px;
-            display: flex; 
-            gap: 20px; 
-            align-items: flex-start; 
-        }
+        .social-links { margin-top: 15px; font-size: 0.95em; }
+        .social-links a { margin-right: 15px; color: #0066cc; }
 
         
-        .software-gif {
-            width: 120px; 
+        .project-row {
+            display: flex;
+            border-bottom: 1px solid #f0f0f0; 
+            padding: 40px 0; 
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .project-meta {
+            width: 140px; 
+            flex-shrink: 0;
+            font-size: 0.85em;
+            color: #888;
+            line-height: 1.5;
+        }
+        .meta-author { display: block; color: #555; }
+
+        .project-content {
+            flex: 1; 
+        }
+
+        .project-title {
+            font-size: 1.4em;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+            text-decoration: none;
+        }
+        .project-title:hover { color: #0066cc; }
+
+        .tags-container {
+            margin-bottom: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 8px;
+            color: #666;
+            background-color: #fff;
+        }
+
+        .project-desc {
+            color: #555;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .project-image-container {
+            width: 220px;
+            flex-shrink: 0;
+        }
+
+        .project-thumb {
+            width: 100%;
             height: auto;
-            border-radius: 6px;
+            border-radius: 4px;
             border: 1px solid #eee;
-            flex-shrink: 0; 
+            display: block;
         }
 
-        .software-text {
-            flex: 1; /
+        @media (max-width: 768px) {
+            .project-row { flex-direction: column; gap: 15px; }
+            .project-meta { width: 100%; margin-bottom: 5px; }
+            .project-image-container { width: 100%; max-width: 100%; margin-top: 15px; }
+            .project-thumb { max-width: 100%; }
         }
-
-        .software-title { 
-            display: block; 
-            font-weight: 600; 
-            color: #000; 
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-        
-        .software-desc {
-            margin-top: 0; 
-            color: #666; 
-        }
-
-        .paper-item { display: flex; margin-bottom: 35px; align-items: flex-start; }
-        .paper-content { flex: 1; padding-right: 20px; }
     </style>
 </head>
 <body>
@@ -103,7 +112,6 @@
             <p>
                 I am a Software Engineering student | <strong>Computer Vision</strong>.
             </p>
-            
             <div class="social-links">
                 <a href="https://github.com/juanramirezbl">GitHub</a>
                 <a href="https://x.com/juanramirezbl">Twitter</a>
@@ -111,28 +119,38 @@
                 <a href="https://www.linkedin.com/in/juan-ramírez-blanco-1440a723a/">LinkedIn</a>
             </div>
         </div>
-        
     </header>
 
     <section>
-        <h2>Research</h2>
-    </section>
+        <h2>Projects</h2> <article class="project-row">
+            
+            <div class="project-meta">
+                <div>Feb 4, 2026</div>
+                <div class="meta-author">Juan Ramírez</div>
+            </div>
 
-    <section>
-        <h2>Software</h2>
-        
-        <div class="software-item">
-            <img src="demo.gif" alt="App Demo" class="software-gif">
+            <div class="project-content">
+                <a href="#" class="project-title">Traffic Sign Detection System</a>
+                
+                <div class="tags-container">
+                    <span class="tag">VISION AI</span>
+                    <span class="tag">YOLO11</span>
+                    <span class="tag">COREML</span>
+                    <span class="tag">IOS SWIFT</span>
+                </div>
 
-            <div class="software-text">
-                <a href="#" class="software-title">Traffic Sign Detection System</a>
-                <p class="software-desc">
-                    Developed an iOS Vision AI application using YOLO11 and CoreML for traffic sign recognition, real-time detection and voice-synthesized alerts.
+                <p class="project-desc">
+                    Developed an iOS Vision AI application using YOLO11 and CoreML for traffic sign recognition. Features real-time detection on edge devices and voice-synthesized alerts for driver assistance.
                 </p>
             </div>
-        </div>
 
-    </section>
+            <div class="project-image-container">
+                <img src="demo.gif" alt="Traffic App Demo" class="project-thumb">
+            </div>
+
+        </article>
+
+        </section>
 
 </body>
 </html>
