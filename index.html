@@ -37,7 +37,6 @@
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* HEADER */
         .header { 
             display: flex; 
             justify-content: space-between; 
@@ -59,21 +58,39 @@
         .social-links { margin-top: 20px; font-size: 0.95em; }
         .social-links a { margin-right: 20px; }
 
-        /* SOFTWARE */
-        .software-item { margin-bottom: 30px; }
+        .software-item { 
+            margin-bottom: 30px;
+            display: flex; 
+            gap: 20px; 
+            align-items: flex-start; 
+        }
+
+        
+        .software-gif {
+            width: 120px; 
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            flex-shrink: 0; 
+        }
+
+        .software-text {
+            flex: 1; /
+        }
+
         .software-title { 
+            display: block; 
             font-weight: 600; 
             color: #000; 
             font-size: 1.1em;
+            margin-bottom: 5px;
         }
         
-        
         .software-desc {
-            margin-top: 5px;
+            margin-top: 0; 
             color: #666; 
         }
 
-        /*  RESEARCH  */
         .paper-item { display: flex; margin-bottom: 35px; align-items: flex-start; }
         .paper-content { flex: 1; padding-right: 20px; }
     </style>
@@ -99,15 +116,20 @@
 
     <section>
         <h2>Research</h2>
-        </section>
+    </section>
 
     <section>
         <h2>Software</h2>
         
         <div class="software-item">
-            <a href="#" class="software-title">Traffic Sign Detection System</a>
-            <p class="software-desc">
-                    Developed an iOS Vision AI application using YOLO11 and CoreML for traffic sign recognition,real-time detection and voice-synthesized alerts.</p>
+            <img src="demo.gif" alt="App Demo" class="software-gif">
+
+            <div class="software-text">
+                <a href="#" class="software-title">Traffic Sign Detection System</a>
+                <p class="software-desc">
+                    Developed an iOS Vision AI application using YOLO11 and CoreML for traffic sign recognition, real-time detection and voice-synthesized alerts.
+                </p>
+            </div>
         </div>
 
     </section>
