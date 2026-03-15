@@ -15,19 +15,16 @@
             line-height: 1.6;
             font-size: 16px;
         }
-
         h1, h2, h3 { color: #111; margin: 0 0 10px 0; font-weight: 600; letter-spacing: -0.02em; }
         h1 { font-size: 2.2em; margin-bottom: 20px; }
         h2 { margin-top: 60px; border-bottom: 1px solid #eee; padding-bottom: 15px; font-size: 1.5em; margin-bottom: 30px;}
         
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
-
         .header { display: flex; gap: 40px; margin-bottom: 50px; align-items: flex-start; }
         .bio-text { flex: 1; }
         .social-links { margin-top: 15px; font-size: 0.95em; }
         .social-links a { margin-right: 15px; color: #0066cc; }
-
         
         .project-row {
             display: flex;
@@ -36,7 +33,6 @@
             gap: 30px;
             align-items: flex-start;
         }
-
         .project-meta {
             width: 140px; 
             flex-shrink: 0;
@@ -45,11 +41,9 @@
             line-height: 1.5;
         }
         .meta-author { display: block; color: #555; }
-
         .project-content {
             flex: 1; 
         }
-
         .project-title {
             font-size: 1.4em;
             color: #333;
@@ -58,14 +52,12 @@
             text-decoration: none;
         }
         .project-title:hover { color: #0066cc; }
-
         .tags-container {
             margin-bottom: 12px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .tag {
             font-size: 0.7em;
             text-transform: uppercase;
@@ -76,19 +68,16 @@
             color: #666;
             background-color: #fff;
         }
-
         .project-desc {
             color: #555;
             font-size: 1em;
             margin: 0;
         }
-
         .project-image-container {
             width: 220px;  
             height: 160px; 
             flex-shrink: 0;
         }
-
         .project-thumb {
             width: 100%;
             height: 100%; 
@@ -101,7 +90,6 @@
             border: 1px solid #eee;
             display: block;
         }
-
         @media (max-width: 768px) {
             .project-row { flex-direction: column; gap: 15px; }
             .project-meta { width: 100%; margin-bottom: 5px; }
@@ -111,7 +99,6 @@
     </style>
 </head>
 <body>
-
     <header class="header">
         <div class="bio-text">
             <h1>Juan Ramírez</h1>
@@ -125,37 +112,109 @@
             </div>
         </div>
     </header>
-
     <section>
-        <h2>Projects</h2> <article class="project-row">
-            
+        <h2>Projects</h2>
+
+        <article class="project-row">
             <div class="project-meta">
                 <div>Feb 4, 2026</div>
                 <div class="meta-author">Juan Ramírez</div>
             </div>
-
             <div class="project-content">
                 <a href="https://github.com/juanramirezbl/velo" class="project-title">Velo</a>
-                
                 <div class="tags-container">
                     <span class="tag">VISION AI</span>
                     <span class="tag">YOLO11</span>
                     <span class="tag">COREML</span>
                     <span class="tag">IOS SWIFT</span>
                 </div>
-
                 <p class="project-desc">
                     Developed an iOS Vision AI application using YOLO11 and CoreML for traffic sign recognition. Features real-time detection on edge devices and voice-synthesized alerts for driver assistance.
                 </p>
             </div>
-
             <div class="project-image-container">
                 <img src="demoP1.gif" alt="Traffic App Demo" class="project-thumb">
             </div>
-
         </article>
 
-        </section>
+        <article class="project-row">
+            <div class="project-meta">
+                <div>2026</div>
+                <div class="meta-author">Juan Ramírez</div>
+            </div>
+            <div class="project-content">
+                <span class="project-title">InsurCall Sentinel</span>
+                <div class="tags-container">
+                    <span class="tag">OPENCLAW</span>
+                    <span class="tag">N8N</span>
+                    <span class="tag">DOCKER</span>
+                    <span class="tag">WHISPER STT</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">FASTAPI</span>
+                    <span class="tag">INSURTECH</span>
+                    <span class="tag">FRAUD DETECTION</span>
+                </div>
+                <p class="project-desc">
+                    Multi-agent system that analyzes insurance phone calls to detect fraud. One agent transcribes via Whisper, another analyzes sentiment and vocal stress, another cross-references data with claims history, and a Manager agent orchestrates everything to generate an explainable fraud score.
+                </p>
+            </div>
+            <div class="project-image-container">
+                <img src="" alt="InsurCall Sentinel Demo" class="project-thumb">
+            </div>
+        </article>
 
+        <article class="project-row">
+            <div class="project-meta">
+                <div>2026</div>
+                <div class="meta-author">Juan Ramírez</div>
+            </div>
+            <div class="project-content">
+                <span class="project-title">ClaimTriage AI</span>
+                <div class="tags-container">
+                    <span class="tag">OPENCLAW</span>
+                    <span class="tag">N8N</span>
+                    <span class="tag">DOCKER</span>
+                    <span class="tag">LLM TOOL-USE</span>
+                    <span class="tag">POSTGRESQL</span>
+                    <span class="tag">MCP SERVERS</span>
+                    <span class="tag">INSURTECH</span>
+                    <span class="tag">CLAIMS AUTOMATION</span>
+                </div>
+                <p class="project-desc">
+                    Multi-agent pipeline that receives claims (text, photos, docs) and automatically classifies them by type (auto, home, health), urgency, and complexity. One agent extracts entities, another validates against the policy, another assigns priority. n8n routes to the correct team and updates the CRM.
+                </p>
+            </div>
+            <div class="project-image-container">
+                <img src="" alt="ClaimTriage AI Demo" class="project-thumb">
+            </div>
+        </article>
+
+        <article class="project-row">
+            <div class="project-meta">
+                <div>2026</div>
+                <div class="meta-author">Juan Ramírez</div>
+            </div>
+            <div class="project-content">
+                <span class="project-title">VoiceRisk Analytics</span>
+                <div class="tags-container">
+                    <span class="tag">OPENCLAW</span>
+                    <span class="tag">N8N</span>
+                    <span class="tag">DOCKER</span>
+                    <span class="tag">REACT + TS</span>
+                    <span class="tag">WEBSOCKET</span>
+                    <span class="tag">RECHARTS</span>
+                    <span class="tag">ANALYTICS</span>
+                    <span class="tag">VOICE AI</span>
+                </div>
+                <p class="project-desc">
+                    Real-time React dashboard that processes and visualizes customer service call metrics: sentiment timeline, risk score gauge, transcript viewer with highlights, and aggregated analytics. Agents process in the background and send data via WebSocket.
+                </p>
+            </div>
+            <div class="project-image-container">
+                <img src="" alt="VoiceRisk Analytics Demo" class="project-thumb">
+            </div>
+        </article>
+
+    </section>
 </body>
 </html>
